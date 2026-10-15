@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html><head><title>Planetary Boundaries · Whiteman et al. (2013)</title><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.slide5-ecology .narrative-full{gap:30px!important;justify-content:center}.slide5-ecology .narrative-full p{font-size:30px!important;line-height:1.34!important;color:var(--fg)!important;border:0!important;padding:0!important}.slide5-ecology .narrative-full p strong{display:block;color:var(--amber);font-size:34px;line-height:1.15;margin-bottom:14px}</style><style>/* Lámina combinada 6: marco original y evolución interactiva */
+.slide-planetary-combined .body>h2{font-size:57px!important}
+.slide-planetary-combined .narrative{font-size:27px;line-height:1.3}
+.slide-planetary-combined .graphic .row{gap:24px!important}
+.slide-planetary-combined #evo1{max-width:68%!important;max-height:390px!important}
+.slide-planetary-combined #evoY{font-size:105px!important}
+.slide-planetary-combined #evoBtns{gap:6px!important}
+.slide-planetary-combined #evoBtns .yb{padding:9px 12px!important;font-size:16px!important}
+.slide-planetary-combined .interpretation{font-size:22px!important}
+</style><style>
+/* Revisión editorial: títulos y narrativa uniformes */
+.slide .body>h2{font-size:54px!important;line-height:1.08!important;font-weight:800!important;letter-spacing:-.015em;max-width:1480px;text-wrap:balance;color:var(--fg)}
+.slide .narrative-full{gap:30px!important;max-width:1450px}
+.slide .narrative-full p,.slide .narrative-full p+p{font-size:32px!important;line-height:1.38!important;color:var(--fg)!important;border-left:none!important;padding-left:0!important}
+.slide .narrative-full p strong{font-size:32px!important;line-height:1.2!important;color:var(--fg)!important}
+.slide .narrative{font-size:28px!important;line-height:1.38!important;color:var(--fg)!important}
+.slide .interpretation{font-size:24px!important;line-height:1.35!important;color:var(--fg)!important;border-top:1px solid var(--line)}
+.slide .slide3-paradox p,.slide .slide3-paradox .slide3-lead{font-size:32px!important;line-height:1.38!important;color:var(--fg)!important}
+.slide .slide3-cite{color:var(--muted)!important}
+.slide .slide4-disconnections li{font-size:30px!important;line-height:1.38!important}
+.slide .slide4-disconnections span{font-size:25px!important}
+.slide .ft{font-size:13px!important;line-height:1.35!important}
+.slide .tag{background:transparent!important;color:var(--fg)!important;padding-inline:0!important}
+</style><style>
+/* Narrativa ampliada: jerarquía consistente y espacio para gráficos */
+.slide .body>h2{font-size:50px!important;line-height:1.08!important}
+.slide .narrative-full{gap:30px!important}
+.slide .narrative-full p,.slide .narrative-full p+p{font-size:31px!important;line-height:1.38!important}
+.slide .narrative-full strong{font-size:31px!important}
+.explained-graphic .narrative{font-size:25px!important;line-height:1.3!important}
+.explained-graphic .interpretation{font-size:22px!important;line-height:1.3!important}
+.explained-graphic .body{gap:14px!important}
+</style><style>.slide-five-detail .narrative-full .supporting-text{display:block;font-size:26px!important;line-height:1.4!important;color:#A6A6A6!important;margin-top:14px}.slide-five-detail .narrative-full strong{color:var(--fg)!important}</style><style>.ctl{display:flex!important}</style><style>.slide .brief-caption{font-size:23px!important;line-height:1.2!important;padding-top:10px;white-space:nowrap}</style><style>.slide-two-white .tk>span:first-child{color:var(--amber)!important}.tk .tag{display:none!important}</style></head><body>
+<title>Whiteman · Explicación del paper</title>
+<meta content="cover" name="claude:viewport-fit-sides"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Layout: escenario fijo 16:9 (1600×900) escalado a la ventana, estilo terminal financiera:
+   barra superior tipo ticker, titular condensado a la izquierda, dato o gráfico como protagonista, fuente en mono abajo. */
+:root{
+  color-scheme:dark;
+  --bg:#000000; --panel:#0D0D0D; --line:#262626; --fg:#F2F2F2; --muted:#9C9C9C;
+  --amber:#FF9E1B; --red:#FF4B3E; --green:#35D39A; --blue:#4DA3FF;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--display);overflow:hidden}
+.vp{position:fixed;inset:0;display:grid;place-items:center;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+.stage{width:1600px;height:900px;position:relative;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg)}
+.slide[hidden]{display:none!important}
+
+/* ticker */
+.tk{height:54px;display:flex;align-items:center;gap:28px;padding:0 56px;border-bottom:2px solid var(--amber);font:500 18px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--amber);flex:none}
+.tk .sec{color:var(--fg)}
+.tk .sp{flex:1}
+.tag{padding:6px 10px;font:600 15px/1 var(--mono);letter-spacing:.08em}
+.tag.p{background:var(--amber);color:#000}
+.tag.u{background:var(--blue);color:#000}
+.tag.a{background:var(--green);color:#000}
+.body{flex:1;display:flex;flex-direction:column;padding:44px 56px 0;gap:28px;min-height:0}
+.ft{height:56px;display:flex;align-items:center;gap:24px;padding:0 460px 0 56px;border-top:1px solid var(--line);font:400 16px/1.3 var(--mono);color:var(--muted);flex:none}
+.ft .sp{flex:1}
+.ft .pg{color:var(--fg)}
+
+h1{font:900 132px/0.92 var(--display);font-stretch:72%;letter-spacing:-.01em;margin:0;text-transform:uppercase}
+h2{font:850 76px/0.98 var(--display);font-stretch:75%;margin:0;max-width:1300px;text-wrap:balance}
+.kick{font:600 20px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:0}
+.lede{font:500 30px/1.3 var(--display);font-stretch:90%;color:var(--fg);max-width:1100px;margin:0}
+.mut{color:var(--muted)}
+.am{color:var(--amber)} .rd{color:var(--red)} .gr{color:var(--green)} .bl{color:var(--blue)}
+.mono{font-family:var(--mono)}
+.row{display:flex;gap:40px;align-items:stretch}
+.grow{flex:1;min-width:0}
+
+.kpi{display:flex;flex-direction:column;gap:12px;padding:28px 32px;border-top:6px solid var(--amber);background:var(--panel)}
+.kpi .n{font:900 150px/0.9 var(--display);font-stretch:75%;letter-spacing:-.02em}
+.kpi .l{font:500 26px/1.3 var(--display);font-stretch:90%;max-width:560px}
+.kpi.r{border-color:var(--red)} .kpi.g{border-color:var(--green)} .kpi.b{border-color:var(--blue)}
+.quote{font:800 64px/1.08 var(--display);font-stretch:80%;max-width:1350px;margin:0;text-wrap:balance}
+.quote .q{color:var(--amber)}
+.who{font:400 20px/1.3 var(--mono);color:var(--muted);margin:0}
+
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;flex:1;align-content:start}
+.col{border-top:2px solid var(--fg);padding-top:20px;display:flex;flex-direction:column;gap:14px}
+.col .num{font:600 22px/1 var(--mono);color:var(--amber)}
+.col h3{font:850 46px/1 var(--display);font-stretch:78%;margin:0}
+.col p{font:400 28px/1.35 var(--display);font-stretch:92%;color:var(--muted);margin:0}
+
+table.term{border-collapse:collapse;width:100%;font:400 23px/1.2 var(--mono)}
+table.term th{font:600 16px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;border-bottom:2px solid var(--amber)}
+table.term td{padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.term td.r,table.term th.r{text-align:right}
+table.term tr.x td:first-child{color:var(--red);font-weight:600}
+.cell-bar{display:flex;align-items:center;gap:12px}
+.cell-bar .tr{width:260px;height:14px;background:#1A1A1A;position:relative}
+.cell-bar .fl{height:100%}
+.cell-bar .lim{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--fg)}
+
+.ft2{display:grid;grid-template-columns:1fr 90px 1fr;gap:0 18px;align-items:center;font:600 34px/1.15 var(--display);font-stretch:85%}
+.ft2 .h{font:600 16px/1 var(--mono);letter-spacing:.1em;color:var(--amber);padding-bottom:10px;border-bottom:2px solid var(--amber)}
+.ft2 .from{color:var(--muted);padding:18px 0;border-bottom:1px solid var(--line)}
+.ft2 .to{padding:18px 0;border-bottom:1px solid var(--line)}
+.ft2 .ar{color:var(--amber);text-align:center;font-family:var(--mono);border-bottom:1px solid var(--line);padding:18px 0}
+
+svg text{font-family:var(--mono)}
+/* narrativa */
+.acts{height:40px;display:flex;flex:none;border-bottom:1px solid var(--line)}
+.acts a{flex:1;display:flex;align-items:center;gap:10px;padding:0 16px;font:500 14px/1 var(--mono);letter-spacing:.08em;color:#5E5E5E;text-decoration:none;border-right:1px solid var(--line);cursor:pointer}
+.acts a:first-child{padding-left:56px}
+.acts a b{font-weight:600;color:#7A7A7A}
+.acts a.on{color:#000;background:var(--amber)}
+.acts a.on b{color:#000}
+.acts a.done{color:var(--muted)}
+.acts a:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+.story{display:flex;align-items:center;gap:14px;font:600 22px/1.2 var(--mono);letter-spacing:.04em;text-transform:none;color:var(--amber);margin:0}
+.story::before{content:"";width:42px;height:2px;background:var(--amber);flex:none}
+.roman{font:900 300px/0.8 var(--display);font-stretch:70%;color:var(--amber);letter-spacing:-.02em}
+.divider .body{justify-content:center;gap:22px}
+.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-block:auto}
+.chain .st{padding:26px 28px 30px;border-top:6px solid var(--amber);background:var(--panel);display:flex;flex-direction:column;gap:14px;position:relative}
+.chain .st + .st{border-left:1px solid #000}
+.chain .st .r{font:600 18px/1 var(--mono);color:var(--amber);letter-spacing:.1em}
+.chain .st h3{font:850 44px/1 var(--display);font-stretch:78%;margin:0}
+.chain .st p{font:400 25px/1.3 var(--display);font-stretch:92%;color:var(--muted);margin:0}
+
+/* controles */
+.ctl{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:10}
+.ctl button{font:600 14px/1 var(--mono);letter-spacing:.06em;background:#111;color:var(--fg);border:1px solid #333;padding:10px 12px;cursor:pointer}
+.yb{font:600 20px/1 var(--mono);letter-spacing:.06em;background:#111;color:var(--fg);border:1px solid #444;padding:12px 18px;cursor:pointer}
+.yb[aria-pressed="true"]{background:var(--amber);color:#000;border-color:var(--amber)}
+.yb:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.ctl button:hover{border-color:var(--amber);color:var(--amber)}
+.ctl button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.notes{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(62px + env(safe-area-inset-bottom,0px));max-width:980px;margin:0 auto;background:#0B0B0B;border:1px solid var(--amber);padding:18px 22px;font:400 16px/1.55 var(--mono);color:#DADADA;z-index:9;max-height:40vh;overflow:auto}
+.notes b{color:var(--amber)}
+@media (prefers-reduced-motion:no-preference){.slide{animation:in .25s ease-out}@keyframes in{from{opacity:.4}to{opacity:1}}}
+</style>
+<style>
+.body{padding:32px 56px 18px!important;gap:18px!important}.body>h2{font-size:58px!important;line-height:1.06!important;max-width:1490px}.narrative{font:400 28px/1.4 var(--display);margin:0;max-width:1470px;color:#e1e1e1}.interpretation{font:500 24px/1.35 var(--display);color:var(--amber);margin:0;padding-top:12px;border-top:1px solid #333}.graphic{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center}.graphic>svg{width:100%!important;height:auto!important;max-height:410px!important;min-height:0!important}.graphic .row{min-height:0!important;flex:1!important;margin:0!important;align-items:center!important}.graphic .row>svg{max-height:395px!important;max-width:68%!important;flex-shrink:1!important}.graphic .row .grow{min-width:0!important}.graphic .row h2{font-size:38px!important}.graphic .kpi{padding:14px 20px!important}.graphic .kpi .n{font-size:70px!important}.graphic .kpi .l{font-size:23px!important}.graphic .lede{font-size:23px!important}.graphic table{font-size:19px!important}.graphic table td{padding:8px 10px!important}.graphic .mono{font-size:18px!important}.graphic .cols3{gap:18px!important}.narrative-full{display:flex;flex-direction:column;justify-content:center;gap:48px;flex:1;max-width:1430px}.narrative-full p{font:400 40px/1.35 var(--display);margin:0}.narrative-full p+p{color:var(--amber);font-size:34px;border-left:4px solid var(--amber);padding-left:28px}.ft{font-size:13px!important}.with-story .body>h2{font-size:66px!important}
+</style><style>
+.intro-two .body{gap:22px!important}.intro-two .body>h2{font-size:56px!important;line-height:1.05!important}.intro-two h3{font:700 33px/1.12 var(--display);color:var(--amber);margin:0 0 15px}.intro-two h4{font:700 27px/1.1 var(--display);margin:0 0 5px}.intro-two p{font:400 27px/1.3 var(--display);margin:0}.intro-two .intro-ref{font:400 19px/1.3 var(--display);color:var(--muted);margin-top:9px}.intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;flex:1}.intro-paradox{padding-top:12px}.intro-paradox .intro-question{font-size:34px;color:var(--amber);margin-top:36px}.intro-disconnect{border-left:1px solid #333;padding:12px 0 0 38px}.intro-disconnect>div{margin-bottom:21px}.intro-rows{display:grid;gap:24px;flex:1;align-content:start}.intro-rows>div{border-left:3px solid var(--amber);padding-left:24px}.intro-rows h3{margin-bottom:8px}.intro-rows p{font-size:27px}
+</style><style>
+.slide-two-white,.slide-two-white *{color:#FFFFFF!important}.slide-two-white .narrative-full p+p{border-left:none!important;padding-left:0!important}.slide-two-white .tag{background:transparent!important}
+</style>
+<style>.slide3-paradox{display:flex;flex-direction:column;gap:30px;flex:1;justify-content:center}.slide3-paradox p{font:400 31px/1.35 var(--display);margin:0;max-width:1450px;color:var(--fg)}.slide3-paradox .slide3-lead{font-size:40px;font-weight:600}.slide3-cite{color:var(--amber)}</style><style>.slide4-disconnections{display:flex;flex-direction:column;gap:30px;justify-content:center;flex:1;margin:0;padding-left:32px}.slide4-disconnections li{font:400 30px/1.4 var(--display);padding-left:8px;color:var(--fg)}.slide4-disconnections strong{font-weight:700}.slide4-disconnections span{color:var(--muted);font-size:27px}.slide4-disconnections li::marker{color:var(--amber)}</style><div class="vp"><div class="stage" id="stage">
+<section class="slide with-story" data-notes="Artículo de Gail Whiteman, Brian Walker y Paolo Perego, publicado en Journal of Management Studies en 2013."><div class="tk"><span></span><span class="sp"></span><span class="tag p">WHITEMAN ET AL. · 2013</span></div><div class="body" style="justify-content:center;gap:30px!important"><p class="story">Gail Whiteman · Brian Walker · Paolo Perego</p><h1 style="font-size:96px;line-height:1.02;max-width:1450px;text-transform:none">Planetary Boundaries:<br/><span class="am">Ecological Foundations for Corporate Sustainability</span></h1></div><div class="ft"><span>Journal of Management Studies, 50(2), 307–336 · DOI: 10.1111/j.1467-6486.2012.01073.x</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story slide-two-white" data-notes="&gt; Idea principal del paper Whiteman, Walker y Perego sostienen que la investigación en sostenibilidad corporativa necesita reconsiderar sus fundamentos ecológicos y sistémicos e integrarse más estrechamente con las ciencias naturales. Para ello introducen el marco de los nueve límites planetarios. El artículo revisa la literatura de management desde ese marco y propone investigar cómo las empresas y las industrias afectan los procesos ecológicos."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Idea principal del paper</h2><div class="narrative-full"><p>Whiteman, Walker y Perego sostienen que la investigación en sostenibilidad corporativa necesita reconsiderar sus fundamentos ecológicos y sistémicos e integrarse más estrechamente con las ciencias naturales.</p><p>Para ello introducen el marco de los nueve límites planetarios.</p><p>El artículo revisa la literatura de management desde ese marco y propone investigar cómo las empresas y las industrias afectan los procesos ecológicos.</p></div></div><div class="ft"><span>Resumen e introducción, pp. 307–309.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide intro-two" data-notes="Paradoja presentada en la introducción, pp. 307–308. Ernst &amp; Young (2010) y World Resources Institute (2005) son fuentes citadas por los autores. La cita de Kallio y Nordberg (2006, p. 447) aparece en p. 307 del paper."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">INTRODUCCIÓN</span></div><div class="body"><h2>Paradoja</h2><div class="slide3-paradox"><p class="slide3-lead">Las prácticas de sostenibilidad y las inversiones verdes aumentan, mientras el planeta se deteriora.</p><p>Ernst &amp; Young reporta que casi tres cuartas partes de las empresas globales con ingresos superiores a US$1.000 millones planeaban aumentar sus inversiones climáticas; la evaluación de 2005 reporta un 60 % de ecosistemas significativamente degradados.</p><p>¿Por qué existe esta desconexión? Parte del problema puede ser que «simplemente no sabemos hasta qué punto las iniciativas ambientales de las empresas contribuyen realmente a la sostenibilidad ecológica, o si contribuyen en algo» <span class="slide3-cite">(Kallio y Nordberg, 2006, p. 447).</span></p></div></div><div class="ft"><span>Whiteman et al. (2013), pp. 307–308 · Ernst &amp; Young (2010); World Resources Institute (2005); Kallio y Nordberg (2006).</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide intro-two" data-notes="Tres desconexiones identificadas por Whiteman et al. (2013) en la introducción, pp. 308–309: medición, enfoque e integración de ciencias naturales. Las referencias son las citadas por el paper."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">INTRODUCCIÓN</span></div><div class="body"><h2>Tres desconexiones en la investigación</h2><ul class="slide4-disconnections"><li><strong>Medición:</strong> predominan estudios que no cuantifican suficientemente el papel de las empresas en el deterioro de los sistemas terrestres <span>(Kallio y Nordberg, 2006; Levy, 1997a; Levy y Lichtenstein, 2011; Walker et al., 2009).</span></li><li><strong>Enfoque:</strong> se estudian empresas, industrias y problemas individuales, con una incorporación insuficiente del pensamiento sistémico <span>(Levy y Lichtenstein, 2011)</span>, aunque los procesos ecológicos están relacionados de formas complejas y no lineales <span>(Rockström et al., 2009a, 2009b).</span></li><li><strong>Fundamentos:</strong> existe poca integración sostenida de teoría y datos de las ciencias naturales <span>(Bansal y Hoffman, 2011)</span>, pese a llamados tempranos a incorporar pensamiento ecológico <span>(Shrivastava, 1994; Starik y Rands, 1995).</span></li></ul></div><div class="ft"><span>Whiteman, Walker y Perego (2013), introducción, pp. 307–309 · Síntesis con las referencias citadas por el artículo.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide slide-five-detail with-story slide5-ecology" data-notes="&gt; Las explicaciones organizacionales necesitan una base ecológica Explicar una práctica no basta para evaluar su contribución. Las teorías sociológicas, institucionales y económicas ayudan a comprender por qué las empresas actúan, cómo responden a presiones y qué resultados organizacionales obtienen (Ansari et al., 2011; Berchicci y King, 2007; Clemens y Bakstran, 2010; Etzion, 2007). También necesitamos conocer sus consecuencias ecológicas. Whiteman, Walker y Perego proponen complementar esas explicaciones con ciencias naturales: ¿qué procesos afectan las actividades empresariales y qué condiciones deben preservarse para sostenerlos?"><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Las explicaciones organizacionales necesitan una base ecológica</h2><div class="narrative-full"><p><strong>Explicar una práctica no basta para evaluar su contribución.</strong><span class="supporting-text">Las teorías sociológicas, institucionales y económicas ayudan a comprender por qué las empresas actúan, cómo responden a presiones y qué resultados organizacionales obtienen (Ansari et al., 2011; Berchicci y King, 2007; Clemens y Bakstran, 2010; Etzion, 2007).</span></p><p><strong>También necesitamos conocer sus consecuencias ecológicas.</strong><span class="supporting-text">Whiteman, Walker y Perego proponen complementar esas explicaciones con ciencias naturales: ¿qué procesos afectan las actividades empresariales y qué condiciones deben preservarse para sostenerlos?</span></p></div></div><div class="ft"><span>Whiteman, Walker y Perego (2013), pp. 307–311 · Rockström et al. (2009a).</span><span class="sp"></span><span class="pg"></span></div></section>
+<section data-notes="&gt; ¿Por qué necesitamos límites? Una mejora relativa no demuestra suficiencia ecológica. Consumir menos recursos o emitir menos que antes informa sobre el cambio de una empresa, pero no establece si la presión colectiva permite preservar el funcionamiento de los ecosistemas. Hace falta una referencia externa a la empresa. Los límites planetarios sitúan las actividades humanas respecto de condiciones biofísicas que se busca mantener. El desafío del paper es conectar esas referencias agregadas con las actividades empresariales." class="slide with-story explanatory"><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>¿Por qué necesitamos límites?</h2><div class="narrative-full"><p><strong>Una mejora relativa no demuestra suficiencia ecológica.</strong> Consumir menos recursos o emitir menos que antes informa sobre el cambio de una empresa, pero no establece si la presión colectiva permite preservar el funcionamiento de los ecosistemas.</p><p><strong>Hace falta una referencia externa a la empresa.</strong> Los límites planetarios sitúan las actividades humanas respecto de condiciones biofísicas que se busca mantener. El desafío del paper es conectar esas referencias agregadas con las actividades empresariales.</p></div></div><div class="ft"><span>Síntesis del argumento · Whiteman et al. (2013), pp. 307–317.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section data-notes="&gt; Proceso, variable y límite: tres conceptos distintos Proceso. El fenómeno ecológico relevante: por ejemplo, el cambio climático. Variable de control. Una medida utilizada para observarlo: por ejemplo, la concentración atmosférica de CO₂. Límite propuesto. Una referencia para delimitar el espacio operativo seguro. En el marco de 2009: 350 ppm de CO₂. Superarlo implica mayor riesgo; no equivale a un punto exacto y conocido de colapso. Los límites se proponen considerando incertidumbres y diferencias entre procesos." class="slide with-story explanatory"><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Proceso, variable y límite: tres conceptos distintos</h2><div class="narrative-full"><p><strong>Proceso.</strong> El fenómeno ecológico relevante: por ejemplo, el cambio climático.</p><p><strong>Variable de control.</strong> Una medida utilizada para observarlo: por ejemplo, la concentración atmosférica de CO₂.</p><p><strong>Límite propuesto.</strong> Una referencia para delimitar el espacio operativo seguro. En el marco de 2009: 350 ppm de CO₂. Superarlo implica mayor riesgo; no equivale a un punto exacto y conocido de colapso. Los límites se proponen considerando incertidumbres y diferencias entre procesos.</p></div></div><div class="ft"><span>Rockström et al. (2009a, 2009b), según Whiteman et al. (2013), pp. 313–317.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide explained-graphic with-graphic slide-planetary-combined" data-notes="&gt; Límites planetarios: el marco y su evolución Rockström et al. (2009) proponen límites para nueve procesos que sostienen condiciones del sistema terrestre favorables para la humanidad. Whiteman et al. incorporan ese marco para situar la sostenibilidad corporativa dentro de un espacio operativo seguro. 2009 2015 2023 2026 ▶ ANIMAR 2009 3 cruzados · 7 evaluados CLIC EN LA RUEDA = AÑO SIGUIENTE ■ espacio seguro ■ ■ riesgo creciente ■ sin cuantificar - - - límite La rueda representa el diagnóstico ecológico, no el desempeño de una empresa."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Límites planetarios: el marco y su evolución</h2><p class="narrative">Rockström et al. (2009) proponen límites para nueve procesos que sostienen condiciones del sistema terrestre favorables para la humanidad. Whiteman et al. incorporan ese marco para situar la sostenibilidad corporativa dentro de un espacio operativo seguro.</p><div class="graphic">
+<div class="row" style="flex:1;min-height:0;align-items:center;gap:30px">
+<svg aria-label="Rueda de los límites planetarios; cambia de año con un clic" id="evo1" role="img" style="height:100%;max-height:600px;flex:none;aspect-ratio:940/670" viewbox="-470 -335 940 670"></svg>
+<div class="grow" style="display:flex;flex-direction:column;gap:18px">
+<div id="evoBtns" style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="yb" data-y="0" type="button">2009</button><button class="yb" data-y="1" type="button">2015</button><button class="yb" data-y="2" type="button">2023</button><button class="yb" data-y="3" type="button">2026</button>
+<button class="yb" id="evoPlay" style="border-color:var(--amber);color:var(--amber)" type="button">▶ ANIMAR</button>
+</div>
+<div id="evoY" style="font:900 150px/0.85 var(--display);font-stretch:75%">2009</div>
+<div class="mono" style="font-size:30px"><span class="rd" id="evoC" style="font-weight:600;font-size:64px;font-family:var(--display)">3</span> <span class="rd">cruzados</span> <span class="mut" id="evoE">· 7 evaluados</span></div>
+<p class="lede" id="evoT" style="font-size:25px;max-width:520px;color:var(--muted)"></p>
+<p class="mono mut" style="font-size:15px;margin:0">CLIC EN LA RUEDA = AÑO SIGUIENTE</p>
+</div>
+</div>
+<div class="mono mut" style="font-size:16px;display:flex;gap:28px;justify-content:center;margin-bottom:6px"><span><span class="gr">■</span> espacio seguro</span><span><span class="am">■</span><span class="rd">■</span> riesgo creciente</span><span><span style="color:#444">■</span> sin cuantificar</span><span>- - - límite</span></div>
+<svg aria-hidden="true" id="wheel" style="display:none" viewBox="-480 -330 960 660"></svg></div><p class="interpretation">La rueda representa el diagnóstico ecológico, no el desempeño de una empresa. </p></div><div class="ft"><span>Whiteman et al. (2013), pp. 313–315 · Rockström et al. (2009) · actualización posterior: SRC (2026).</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide explained-graphic with-graphic" data-notes="&gt; los impactos se conectan entre escalas Clima, acidificación oceánica y ozono tienen dinámica planetaria. Agua, suelo, aerosoles y ciclos del nitrógeno y fósforo producen efectos regionales y globales. La pérdida de biodiversidad y la contaminación química operan principalmente a escala local y regional, pero sus efectos acumulados reducen la resiliencia planetaria. CON POSIBLE UMBRAL GLOBAL riesgo de cambios abruptos PROCESOS LENTOS, SIN UMBRAL CONOCIDO erosionan la resiliencia PLANETARIOS un solo sistema EFECTOS LOCALES Y REGIONALES se acumulan entre escalas"><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>los impactos se conectan entre escalas</h2><p class="narrative"><strong>Clima, acidificación oceánica y ozono tienen dinámica planetaria.</strong> Agua, suelo, aerosoles y ciclos del nitrógeno y fósforo producen efectos regionales y globales. La pérdida de biodiversidad y la contaminación química operan principalmente a escala local y regional, pero sus efectos acumulados reducen la resiliencia planetaria.</p><div class="graphic">
+<svg aria-label="matriz de escala por tipo de umbral" role="img" style="width:100%;flex:1" viewbox="0 0 1490 560">
+<g font-size="20">
+<text fill="#FF9E1B" font-weight="600" x="420" y="34">CON POSIBLE UMBRAL GLOBAL</text>
+<text fill="#9C9C9C" x="420" y="60">riesgo de cambios abruptos</text>
+<text fill="#FF9E1B" font-weight="600" x="960" y="34">PROCESOS LENTOS, SIN UMBRAL CONOCIDO</text>
+<text fill="#9C9C9C" x="960" y="60">erosionan la resiliencia</text>
+<line stroke="#FF9E1B" stroke-width="2" x1="0" x2="1490" y1="78" y2="78"></line>
+<line stroke="#555" stroke-dasharray="8 8" stroke-width="2" x1="940" x2="940" y1="20" y2="560"></line>
+<text fill="#F2F2F2" font-size="22" font-weight="600" x="0" y="140">PLANETARIOS</text>
+<text fill="#9C9C9C" x="0" y="168">un solo sistema</text>
+<line stroke="#262626" x1="0" x2="1490" y1="250" y2="250"></line>
+<text fill="#F2F2F2" font-size="22" font-weight="600" x="0" y="380">EFECTOS LOCALES Y REGIONALES</text>
+<text fill="#9C9C9C" x="0" y="408">se acumulan entre escalas</text>
+</g>
+<g font-size="22" font-weight="600" id="t1bars"></g>
+</svg>
+</div><p class="interpretation brief-caption">Los impactos locales pueden acumularse y afectar la resiliencia planetaria.</p></div><div class="ft"><span>Planetary Boundaries, pp. 313–314.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide explained-graphic with-graphic" data-notes="&gt; Tres límites ya estaban sobrepasados El diagnóstico utilizado por el paper identifica tres transgresiones: clima, pérdida de biodiversidad y ciclo del nitrógeno. El color rojo identifica los procesos que sobrepasaban los límites propuestos. Las variables muestran que estas presiones pueden observarse y medirse. Límite Variable 2009 Estado en 2009"><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Tres límites ya estaban sobrepasados</h2><p class="narrative"><strong>El diagnóstico utilizado por el paper identifica tres transgresiones: clima, pérdida de biodiversidad y ciclo del nitrógeno.</strong> El color rojo identifica los procesos que sobrepasaban los límites propuestos. Las variables muestran que estas presiones pueden observarse y medirse.</p><div class="graphic">
+<table class="term">
+<thead><tr><th>Límite</th><th>Variable</th><th class="r">2009</th><th>Estado en 2009</th></tr></thead>
+<tbody id="t2"></tbody>
+</table>
+</div><p class="interpretation brief-caption">El clima, la biodiversidad y el nitrógeno sobrepasaban los límites propuestos en 2009.</p></div><div class="ft"><span>Operational Indicators of Key Threshold Effects, pp. 314–317.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide explained-graphic with-graphic" data-notes="&gt; sabemos más de unos problemas que de otros Contaminación química y clima concentran las referencias; el agua recibe menos atención. Los estudios de emisiones tóxicas conectan prácticas empresariales con emisiones medidas. En clima se conocen mejor los factores que impulsan estrategias y divulgación que sus efectos sobre las emisiones agregadas."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>sabemos más de unos problemas que de otros</h2><p class="narrative"><strong>Contaminación química y clima concentran las referencias; el agua recibe menos atención.</strong> Los estudios de emisiones tóxicas conectan prácticas empresariales con emisiones medidas. En clima se conocen mejor los factores que impulsan estrategias y divulgación que sus efectos sobre las emisiones agregadas.</p><div class="graphic">
+<svg aria-label="Estudios por límite: químicos 15, clima 13, suelo 7, biodiversidad 4, agua 3, ozono 2, nitrógeno y fósforo 0, aerosoles 0, océano 0" role="img" style="width:100%;flex:1" viewbox="0 0 1490 560"><g id="t3"></g></svg>
+</div><p class="interpretation brief-caption">La investigación revisada se concentra en contaminación química y cambio climático.</p></div><div class="ft"><span></span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="&gt; Después del paper: ¿se amplió la investigación? Whiteman et al. identificaban una cobertura desigual de los problemas ambientales. La exploración posterior pregunta cómo se difundió el marco. El material bibliométrico aportado muestra un corpus de 210 publicaciones y una concentración temática que permite formular nuevas preguntas sobre esa brecha. 210 artículos en negocios 36% en una sola revista (J. Cleaner Production) 54% de los centrados en un límite: solo clima 2 de 210 nombran dos límites*"><div class="tk"><span>Ejercicio propio</span><span class="sp"></span><span class="tag a">EXPLORACIÓN APORTADA</span></div><div class="body"><h2>Después del paper: ¿se amplió la investigación?</h2><p class="narrative"><strong>Whiteman et al. identificaban una cobertura desigual de los problemas ambientales. La exploración posterior pregunta cómo se difundió el marco.</strong> El material bibliométrico aportado muestra un corpus de 210 publicaciones y una concentración temática que permite formular nuevas preguntas sobre esa brecha.</p><div class="graphic">
+<div class="row" style="flex:1;align-items:flex-end;margin-bottom:30px">
+<svg aria-label="Artículos por año que usan el marco, 2012 a 2026" role="img" style="width:760px;flex:none" viewbox="0 0 760 400"><g id="yrs"></g></svg>
+<div class="grow" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div class="kpi" style="padding:18px 22px"><span class="n am" style="font-size:84px">210</span><span class="l" style="font-size:20px">artículos en negocios</span></div>
+<div class="kpi" style="padding:18px 22px"><span class="n am" style="font-size:84px">36%</span><span class="l" style="font-size:20px">en una sola revista (J. Cleaner Production)</span></div>
+<div class="kpi r" style="padding:18px 22px"><span class="n rd" style="font-size:84px">54%</span><span class="l" style="font-size:20px">de los centrados en un límite: solo clima</span></div>
+<div class="kpi r" style="padding:18px 22px"><span class="n rd" style="font-size:84px">2</span><span class="l" style="font-size:20px">de 210 nombran dos límites*</span></div>
+</div>
+</div>
+</div><p class="interpretation brief-caption">El ejercicio propio explora la difusión del marco en publicaciones de negocios.</p></div><div class="ft"><span>Scopus, área Business, exportado el 15-10-2026 · corpus aportado; base no adjunta para verificar resultados</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="&gt; ¿Cambió la atención a los procesos planetarios? El gráfico pone en diálogo el diagnóstico de 2013 con una búsqueda posterior. En las referencias seleccionadas por Whiteman et al. predominan las referencias a contaminación química; en las clasificaciones posteriores aportadas destaca el clima. Esta diferencia sugiere revisar qué procesos reciben atención y cuáles permanecen relegados."><div class="tk"><span>Ejercicio propio</span><span class="sp"></span><span class="tag a">EXPLORACIÓN APORTADA</span></div><div class="body"><h2>¿Cambió la atención a los procesos planetarios?</h2><p class="narrative"><strong>El gráfico pone en diálogo el diagnóstico de 2013 con una búsqueda posterior.</strong> En las referencias seleccionadas por Whiteman et al. predominan las referencias a contaminación química; en las clasificaciones posteriores aportadas destaca el clima. Esta diferencia sugiere revisar qué procesos reciben atención y cuáles permanecen relegados.</p><div class="graphic">
+<svg aria-label="Participación de cada límite: Referencias de Whiteman 2013 frente a publicaciones 2012 a 2026" role="img" style="width:100%;flex:1;min-height:0" viewbox="0 0 1490 560"><g id="cmp3"></g></svg>
+</div><p class="interpretation brief-caption">La comparación exploratoria muestra distinta atención a los procesos planetarios.</p></div><div class="ft"><span></span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="&gt; Exploración preliminar de procesos y enfoques Este ejercicio preliminar explora menciones conjuntas de procesos planetarios y enfoques de management en el corpus seleccionado. La red ofrece una primera aproximación para identificar asociaciones que podrían examinarse con mayor detalle."><div class="tk"><span>Ejercicio propio</span><span class="sp"></span><span class="tag a">EXPLORACIÓN APORTADA</span></div><div class="body"><h2>Exploración preliminar de procesos y enfoques</h2><p class="narrative">Este ejercicio preliminar explora menciones conjuntas de procesos planetarios y enfoques de management en el corpus seleccionado. La red ofrece una primera aproximación para identificar asociaciones que podrían examinarse con mayor detalle.</p><div class="graphic">
+<svg aria-label="Red bipartita entre límites y enfoques teóricos" role="img" style="width:100%;flex:1;min-height:0" viewbox="0 0 1490 590"><g id="bip"></g></svg>
+</div><p class="interpretation brief-caption">La red explora menciones conjuntas de procesos planetarios y enfoques de management.</p></div><div class="ft"><span>210 artículos Scopus · grosor = artículos que mencionan ambos · tamaño = artículos con ese enfoque</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story" data-notes=" Qué concluye el paper.  Más iniciativas ambientales no permiten, por sí solas, establecer sostenibilidad ecológica. Es necesario evaluar sus resultados materiales y sus efectos acumulativos sobre los procesos planetarios.  Qué propone para investigación y gestión.  Estudiar conjuntamente empresas, industrias y sistemas ecológicos, integrando management y ciencias naturales. La acción requiere coordinación, incentivos, metas compartidas y rendición de cuentas.  Qué queda pendiente.  El artículo ofrece fundamentos y una agenda, pero no desarrolla suficientemente cómo las decisiones empresariales producen resultados ecológicos colectivos ni cómo distribuir responsabilidades entre empresas."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Conclusión: conectar empresas y sistemas ecológicos</h2><div class="narrative-full"><p><strong>Qué concluye el paper.</strong> Más iniciativas ambientales no permiten, por sí solas, establecer sostenibilidad ecológica. Es necesario evaluar sus resultados materiales y sus efectos acumulativos sobre los procesos planetarios.</p><p><strong>Qué propone para investigación y gestión.</strong> Estudiar conjuntamente empresas, industrias y sistemas ecológicos, integrando management y ciencias naturales. La acción requiere coordinación, incentivos, metas compartidas y rendición de cuentas.</p><p><strong>Qué queda pendiente.</strong> El artículo ofrece fundamentos y una agenda, pero no desarrolla suficientemente cómo las decisiones empresariales producen resultados ecológicos colectivos ni cómo distribuir responsabilidades entre empresas.</p></div></div><div class="ft"><span>Conclusion, pp. 329–331.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story" data-notes="Inicio de los anexos. Las siguientes láminas contienen material complementario a la exposición principal."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag a">MATERIAL COMPLEMENTARIO</span></div><div class="body" style="justify-content:center;align-items:flex-start"><p class="story">Material complementario</p><h1 style="font-size:156px;line-height:1;color:var(--amber)">ANEXOS</h1></div><div class="ft"><span>Whiteman, Walker y Perego (2013) · Material de apoyo</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="&gt; Borneo como escala focal del análisis Los autores comienzan por Borneo y sus procesos ecológicos, y después identifican empresas y cadenas de valor vinculadas a palma y madera. La fragmentación del bosque conecta cambios en el uso del suelo, pérdida de biodiversidad y vulnerabilidad a incendios. PLANETARIO REGIONAL LOCAL CAMBIO CLIMÁTICO − BIODIVERSIDAD BOSQUE FRAGMENTADO PALMA ACEITERA ej. Unilever, comprador MADERERAS ej. Samling Group 13–40% de las emisiones fósiles anuales del mundo, liberadas por los incendios de Borneo de 1997* La Figura 2 propone estudiar impactos de múltiples empresas e interacciones entre escalas. Las emisiones históricas de los incendios ilustran la conexión regional–global; no se atribuyen a Unilever."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag p">ARGUMENTO DEL PAPER</span></div><div class="body"><h2>Borneo como escala focal del análisis</h2><p class="narrative">Los autores comienzan por Borneo y sus procesos ecológicos, y después identifican empresas y cadenas de valor vinculadas a palma y madera. La fragmentación del bosque conecta cambios en el uso del suelo, pérdida de biodiversidad y vulnerabilidad a incendios.</p><div class="graphic">
+<div class="row" style="flex:1;align-items:center">
+<svg aria-label="Tres niveles: plantaciones y madereras en lo local, bosque fragmentado y menos biodiversidad en lo regional, cambio climático en lo planetario" role="img" style="width:860px;flex:none" viewbox="0 0 860 500">
+<defs><marker id="ah" markerheight="6" markerwidth="6" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="#FF9E1B"></path></marker></defs>
+<g fill="#9C9C9C" font-size="18"><text x="0" y="40">PLANETARIO</text><text x="0" y="215">REGIONAL</text><text x="0" y="395">LOCAL</text></g>
+<line stroke="#262626" x1="0" x2="860" y1="130" y2="130"></line><line stroke="#262626" x1="0" x2="860" y1="310" y2="310"></line>
+<g font-size="22" font-weight="600" text-anchor="middle">
+<rect fill="#FF4B3E" height="60" width="300" x="300" y="35"></rect><text fill="#000" x="450" y="73">CAMBIO CLIMÁTICO</text>
+<rect fill="none" height="60" stroke="#FF9E1B" stroke-width="2" width="270" x="150" y="190"></rect><text fill="#F2F2F2" x="285" y="228">− BIODIVERSIDAD</text>
+<rect fill="none" height="60" stroke="#FF9E1B" stroke-width="2" width="300" x="500" y="190"></rect><text fill="#F2F2F2" x="650" y="228">BOSQUE FRAGMENTADO</text>
+<rect fill="#1A1A1A" height="70" width="270" x="150" y="370"></rect><text fill="#F2F2F2" x="285" y="402">PALMA ACEITERA</text><text fill="#9C9C9C" font-size="16" font-weight="400" x="285" y="428">ej. Unilever, comprador</text>
+<rect fill="#1A1A1A" height="70" width="300" x="500" y="370"></rect><text fill="#F2F2F2" x="650" y="402">MADERERAS</text><text fill="#9C9C9C" font-size="16" font-weight="400" x="650" y="428">ej. Samling Group</text>
+</g>
+<g fill="none" marker-end="url(#ah)" stroke="#FF9E1B" stroke-width="3">
+<path d="M330 370 Q450 320 580 252"></path><path d="M650 370 L650 254"></path><path d="M500 220 L424 220"></path>
+<path d="M650 190 Q630 140 560 97"></path><path d="M285 190 Q300 140 340 97"></path>
+</g>
+</svg>
+<div class="kpi r grow"><span class="n rd" style="font-size:132px">13–40%</span><span class="l">de las emisiones fósiles anuales del mundo, liberadas por los <b>incendios de Borneo de 1997*</b></span></div>
+</div>
+</div><p class="interpretation">La Figura 2 propone estudiar impactos de múltiples empresas e interacciones entre escalas. Las emisiones históricas de los incendios ilustran la conexión regional–global; no se atribuyen a Unilever.</p></div><div class="ft"><span>Corporate Sustainability Research and the Planetary Boundary Framework, pp. 324–326; figura 2.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="Los sistemas naturales son sistemas adaptativos complejos que pueden presentar cambios abruptos. Su capacidad de reorganizarse manteniendo su configuración tiene límites: al excederlos, pueden desplazarse hacia un estado diferente. La resiliencia es la capacidad de absorber perturbaciones manteniendo funciones. En los sistemas socioecológicos, las personas dependen de los ecosistemas y sus actividades influyen sobre ellos, mientras las condiciones ecológicas también afectan las dinámicas sociales. Fuente: Natural Science and Planetary Systems, pp. 312–313."><div class="tk"><span>Material complementario</span><span class="sp"></span><span class="tag a">ANEXO</span></div><div class="body"><h2>Sistemas naturales, no linealidad y resiliencia</h2><p class="narrative">Los sistemas naturales son sistemas adaptativos complejos que pueden presentar cambios abruptos. Su capacidad de reorganizarse manteniendo su configuración tiene límites: al excederlos, pueden desplazarse hacia un estado diferente.</p><div class="graphic">
+<div class="row" style="flex:1;align-items:center">
+<svg aria-label="Pelota en un valle: un empujón pequeño vuelve; si cruza el umbral cae a otro estado" role="img" style="width:900px;flex:none" viewbox="0 0 900 380">
+<path d="M20 90 C140 90 170 300 300 300 C430 300 440 130 520 130 C600 130 640 340 760 340 C820 340 860 260 880 240" fill="none" stroke="#F2F2F2" stroke-width="4"></path>
+<circle cx="300" cy="272" fill="#35D39A" r="26"></circle>
+<path d="M340 255 Q420 190 485 150" fill="none" stroke="#FF9E1B" stroke-dasharray="10 8" stroke-width="4"></path>
+<line stroke="#FF4B3E" stroke-dasharray="6 6" stroke-width="2" x1="520" x2="520" y1="40" y2="360"></line>
+<text fill="#FF4B3E" font-size="22" font-weight="600" text-anchor="middle" x="520" y="30">UMBRAL</text>
+<text fill="#F2F2F2" font-size="22" text-anchor="middle" x="300" y="350">ESTADO ACTUAL</text>
+<text fill="#9C9C9C" font-size="22" text-anchor="middle" x="760" y="375">OTRO ESTADO</text>
+</svg>
+<div class="grow" style="display:flex;flex-direction:column;gap:30px">
+<div><div class="mono am" style="font-size:20px">HOLOCENO</div><div style="font:900 120px/0.9 var(--display);font-stretch:75%">10.000</div><div class="lede mut" style="font-size:26px">años de relativa estabilidad</div></div>
+</div>
+</div>
+</div><p class="interpretation">La resiliencia es la capacidad de absorber perturbaciones manteniendo funciones. En los sistemas socioecológicos, las personas dependen de los ecosistemas y sus actividades influyen sobre ellos, mientras las condiciones ecológicas también afectan las dinámicas sociales.</p></div><div class="ft"><span>Natural Science and Planetary Systems, pp. 312–313.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="El conteo de límites superados cambia entre evaluaciones. También cambian las definiciones y las variables. La cifra de CO₂ y su fecha están conservadas del material aportado: para usarlas como dato contemporáneo deben cotejarse con su fuente y distinguir promedio global, observatorio y promedio mensual."><div class="tk"><span>Material complementario</span><span class="sp"></span><span class="tag a">ANEXO</span></div><div class="body"><h2>Límites superados y contexto de comparación</h2><p class="narrative">El conteo aumenta entre las evaluaciones mostradas. Esa evolución combina cambios ambientales con avances de medición y modificaciones del marco. Por eso, contar transgresiones no basta para medir cuánto empeoró el planeta.</p><div class="graphic">
+<div class="row" style="flex:1;align-items:center">
+<svg aria-label="Límites cruzados: 3 en 2009, 4 en 2015, 6 en 2023, 7 en 2026" role="img" style="width:900px;flex:none" viewbox="0 0 900 400"><g id="dots"></g></svg>
+<div class="grow" style="display:flex;flex-direction:column;gap:30px">
+<div><div class="mono am" style="font-size:20px">CO₂ (PPM)</div><div style="font:900 110px/0.9 var(--display);font-stretch:75%">387 <span class="mut" style="font-size:60px">→</span> <span class="rd">432</span></div><div class="mono mut" style="font-size:18px">paper (2009) → mayo 2026 · límite 350</div></div>
+</div>
+</div>
+</div><p class="interpretation">La actualización refuerza la relevancia del problema, pero no valida por sí sola las afirmaciones organizacionales del paper.</p></div><div class="ft"><span>Stockholm Resilience Centre (2026); Richardson et al. (2023); Scripps/NOAA (2026)</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="Las etiquetas evolucionan: integridad de la biosfera, entidades nuevas y cambio del agua dulce amplían o modifican indicadores. Nitrógeno y fósforo ya formaban un límite conjunto en 2009. Actualizar las mediciones exige revisar cada definición, no solo sustituir cifras."><div class="tk"><span>Material complementario</span><span class="sp"></span><span class="tag a">ANEXO</span></div><div class="body"><h2>Cambios en las definiciones e indicadores</h2><p class="narrative">La integridad de la biosfera amplía la atención desde extinciones hacia funcionamiento ecológico. El agua dulce incorpora humedad del suelo. Entidades nuevas abarca presiones más amplias que la etiqueta original de contaminación química.</p><div class="graphic">
+<table class="term" style="font-size:21px">
+<thead><tr><th style="width:30%">En el paper (2009)</th><th style="width:30%">Hoy</th><th>Qué cambió</th></tr></thead>
+<tbody>
+<tr><td>Pérdida de biodiversidad</td><td class="bl">Integridad de la biósfera</td><td style="color:#9C9C9C">+ diversidad funcional (2015)</td></tr>
+<tr><td>Contaminación química</td><td class="bl">Nuevas entidades</td><td style="color:#9C9C9C">Plásticos, sintéticos; cuantificado en 2023</td></tr>
+<tr><td>Ciclos de N y P</td><td class="bl">Flujos biogeoquímicos</td><td style="color:#9C9C9C">Ya eran un límite conjunto en 2009</td></tr>
+<tr><td>Cambio en uso del suelo</td><td class="bl">Cambio del sistema terrestre</td><td style="color:#9C9C9C">% cultivado → % bosque que queda</td></tr>
+<tr><td>Uso de agua dulce</td><td class="bl">Cambio en el agua dulce</td><td style="color:#9C9C9C">+ agua verde, humedad del suelo (2023)</td></tr>
+<tr><td>Aerosoles atmosféricos</td><td>Igual</td><td style="color:#9C9C9C">Sin número en 2009; cuantificado en 2023</td></tr>
+</tbody>
+</table>
+</div><p class="interpretation">Actualizar los números exige revisar las definiciones. Nitrógeno y fósforo ya integraban un mismo límite en 2009.</p></div><div class="ft"><span>Steffen et al. (2015); Richardson et al. (2023); Planetary Health Check (2025)</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="Los autores identifican una brecha entre el conocimiento de medidas y límites agregados y el conocimiento de sus fuentes desagregadas. Para gobernar dentro de los límites es necesario identificar emisiones, usos de recursos y cambios ecológicos asociados a distintos actores. La pregunta pendiente es cómo atribuir a geografías, industrias y empresas sus contribuciones al efecto planetario colectivo. Esa conexión requiere información sobre actividades organizacionales. Fuente: Operational Indicators of Key Threshold Effects, p. 317."><div class="tk"><span>Material complementario</span><span class="sp"></span><span class="tag a">ANEXO</span></div><div class="body"><h2>Desagregar las fuentes de la presión planetaria</h2><p class="narrative">Los autores identifican una brecha entre el conocimiento de medidas y límites agregados y el conocimiento de sus fuentes desagregadas. Para gobernar dentro de los límites es necesario identificar emisiones, usos de recursos y cambios ecológicos asociados a distintos actores.</p><div class="graphic">
+<svg aria-label="Una barra con el total conocido y abajo la misma barra dividida en partes desconocidas" role="img" style="width:100%;margin-top:auto;margin-bottom:30px" viewbox="0 0 1490 360">
+<text fill="#9C9C9C" font-size="20" x="0" y="24">INDICADORES A ESCALA DEL SISTEMA</text>
+<rect fill="#FF9E1B" height="90" width="1490" x="0" y="40"></rect>
+<text fill="#000" font-size="30" font-weight="600" x="30" y="98">PRESIÓN ECOLÓGICA AGREGADA</text>
+<text fill="#9C9C9C" font-size="20" x="0" y="200">¿CÓMO CONTRIBUYEN TERRITORIOS, INDUSTRIAS Y EMPRESAS?</text>
+<g id="splitbar"></g>
+</svg>
+</div><p class="interpretation">La pregunta pendiente es cómo atribuir a geografías, industrias y empresas sus contribuciones al efecto planetario colectivo. Esa conexión requiere información sobre actividades organizacionales.</p></div><div class="ft"><span>Operational Indicators of Key Threshold Effects, p. 317.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story" data-notes="&gt; Hahn: tensiones entre objetivos de sostenibilidad Whiteman establece la necesidad de evaluar resultados ecológicos. Hahn explica por qué responder a esa exigencia puede generar tensiones entre objetivos económicos, ambientales y sociales, entre niveles y entre horizontes temporales. Su enfoque integrador pide reconocer esas tensiones y gestionarlas mediante aceptación y estrategias de resolución. Complementa la agenda de Whiteman sin demostrar que todos los conflictos puedan eliminarse."><div class="tk"><span>Diálogo con otros papers</span><span class="sp"></span><span class="tag a">LECTURA COMPARADA</span></div><div class="body"><h2>Hahn: tensiones entre objetivos de sostenibilidad</h2><div class="narrative-full"><p>Whiteman establece la necesidad de evaluar resultados ecológicos. Hahn explica por qué responder a esa exigencia puede generar tensiones entre objetivos económicos, ambientales y sociales, entre niveles y entre horizontes temporales.</p><p>Su enfoque integrador pide reconocer esas tensiones y gestionarlas mediante aceptación y estrategias de resolución. Complementa la agenda de Whiteman sin demostrar que todos los conflictos puedan eliminarse.</p></div></div><div class="ft"><span>Hahn et al. (2015), Journal of Business Ethics, 127, 297–316.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story" data-notes="&gt; George: organizar la acción colectiva Los impactos acumulados de varias empresas exigen coordinación con gobiernos, comunidades y otros actores. George ayuda a analizar cómo se articula un desafío, quién participa y qué barreras obstaculizan la acción. Sus arquitecturas de coordinación y su atención a acciones multinivel desarrollan preguntas organizacionales que Whiteman deja abiertas. Su marco también abarca desafíos sociales más amplios que los ecológicos."><div class="tk"><span>Diálogo con otros papers</span><span class="sp"></span><span class="tag a">LECTURA COMPARADA</span></div><div class="body"><h2>George: organizar la acción colectiva</h2><div class="narrative-full"><p>Los impactos acumulados de varias empresas exigen coordinación con gobiernos, comunidades y otros actores. George ayuda a analizar cómo se articula un desafío, quién participa y qué barreras obstaculizan la acción.</p><p>Sus arquitecturas de coordinación y su atención a acciones multinivel desarrollan preguntas organizacionales que Whiteman deja abiertas. Su marco también abarca desafíos sociales más amplios que los ecológicos.</p></div></div><div class="ft"><span>George et al. (2016), Academy of Management Journal, 59(6), 1880–1895.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-story" data-notes="&gt; Grewatsch: investigar con pensamiento sistémico Grewatsch retoma explícitamente a Whiteman y cuestiona estudiar problemas complejos como si fueran problemas aislados de desempeño empresarial. Las organizaciones modifican su contexto y ese contexto modifica sus decisiones. Propone estudiar coevolución, procesos y puntos de inflexión. Así profundiza cómo investigar la conexión socioecológica. La lectura conjunta no constituye un modelo único compartido por los cuatro textos."><div class="tk"><span>Diálogo con otros papers</span><span class="sp"></span><span class="tag a">LECTURA COMPARADA</span></div><div class="body"><h2>Grewatsch: investigar con pensamiento sistémico</h2><div class="narrative-full"><p>Grewatsch retoma explícitamente a Whiteman y cuestiona estudiar problemas complejos como si fueran problemas aislados de desempeño empresarial. Las organizaciones modifican su contexto y ese contexto modifica sus decisiones.</p><p>Propone estudiar coevolución, procesos y puntos de inflexión. Así profundiza cómo investigar la conexión socioecológica. La lectura conjunta no constituye un modelo único compartido por los cuatro textos.</p></div></div><div class="ft"><span>Grewatsch et al. (2023), Strategic Organization, 21(3), 721–732.</span><span class="sp"></span><span class="pg"></span></div></section>
+<section class="slide with-graphic" data-notes="La red muestra coocurrencia y agrupación de conceptos, no relaciones causales. Los nombres de grupos son interpretaciones. Las palabras clave y su selección influyen en el mapa. El corpus y la clasificación deben verificarse antes de formular conclusiones definitivas sobre todo el campo."><div class="tk"><span>Whiteman et al 2013</span><span class="sp"></span><span class="tag a">EXPLORACIÓN APORTADA</span></div><div class="body"><h2>Vocabulario y conexiones del corpus</h2><p class="narrative">Las palabras clave se agrupan por sus apariciones conjuntas. Esto ayuda a identificar conversaciones cercanas o separadas y a formular preguntas sobre cómo se integra el marco en la literatura.</p><div class="graphic">
+<div class="row" style="flex:1;min-height:0;gap:20px">
+<svg aria-label="Red de los 30 conceptos más frecuentes" id="kwb" role="img" style="flex:1;min-width:0;height:100%" viewbox="0 0 1180 560"></svg>
+<div class="mono" id="kwbleg" style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px;justify-content:center;font-size:18px"></div>
+</div>
+</div><p class="interpretation">La selección de términos, el corpus y el algoritmo afectan el mapa. Los grupos requieren interpretación y no representan por sí solos escuelas teóricas consolidadas.</p></div><div class="ft"><span>30 palabras clave de autor (3+ artículos) · grupos: Louvain · borde = marco teórico</span><span class="sp"></span><span class="pg"></span></div></section></div></div>
+<div class="notes" hidden="" id="notes"></div>
+<div class="ctl">
+<button aria-pressed="false" id="bN" type="button">NOTAS (N)</button>
+<button id="bF" type="button">PANTALLA (F)</button>
+<button aria-label="Anterior" id="bP" type="button">◀</button>
+<button aria-label="Siguiente" id="bX" type="button">▶</button>
+</div>
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  const el=(t,a,x)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;return e};
+  const C={fg:'#F2F2F2',mu:'#9C9C9C',am:'#FF9E1B',rd:'#FF4B3E',gr:'#35D39A',bl:'#4DA3FF',ln:'#262626',dk:'#1A1A1A'};
+
+  /* Rueda 2009 (orden oficial) */
+  (function(){
+    const g=document.getElementById('wheel'),R=82,MAX=3.1,STEP=40;
+    const S=[['Contaminación|química',[null]],['Ozono|estratosférico',[0.45]],['Aerosoles|atmosféricos',[null]],['Acidificación|del océano',[0.8]],['Ciclos de N y P',[[2.9,'N'],[0.6,'P']]],['Uso de|agua dulce',[0.65]],['Cambio en|uso del suelo',[0.75]],['Pérdida de|biodiversidad',[3.2]],['Cambio|climático',[1.55]]];
+    const pt=(r,d)=>[r*Math.sin(d*Math.PI/180),-r*Math.cos(d*Math.PI/180)];
+    const wedge=(r,a0,a1)=>{const[x0,y0]=pt(r,a0),[x1,y1]=pt(r,a1);return `M0 0L${x0} ${y0}A${r} ${r} 0 0 1 ${x1} ${y1}Z`};
+    g.appendChild(el('circle',{cx:0,cy:0,r:R,fill:'#0E2A20'}));
+    S.forEach(([name,vals],i)=>{const a0=i*STEP,w=STEP/vals.length;
+      vals.forEach((it,j)=>{const v=Array.isArray(it)?it[0]:it,lab=Array.isArray(it)?it[1]:'',b0=a0+j*w+.8,b1=a0+(j+1)*w-.8;
+        if(v==null){g.appendChild(el('path',{d:wedge(R*MAX,b0,b1),fill:'#1C1C1C'}));return}
+        if(v>1){g.appendChild(el('path',{d:wedge(R*Math.min(v,MAX),b0,b1),fill:C.rd}))}
+        g.appendChild(el('path',{d:wedge(R*Math.min(v,1),b0,b1),fill:C.gr}));
+        if(lab){const[lx,ly]=pt(v>1.3?R*1.6:R*1.3,(b0+b1)/2);g.appendChild(el('text',{x:lx,y:ly+7,'text-anchor':'middle',fill:v>1.3?'#000':C.fg,'font-size':20,'font-weight':600},lab))}
+      });
+      const[ex,ey]=pt(R*MAX+8,a0);g.appendChild(el('line',{x1:0,y1:0,x2:ex,y2:ey,stroke:'#333','stroke-width':1.5}));
+      const mid=a0+STEP/2,[tx,ty]=pt(R*MAX+28,mid),sx=Math.sin(mid*Math.PI/180);
+      const crossed=vals.some(it=>{const v=Array.isArray(it)?it[0]:it;return v!=null&&v>1});
+      const nq=vals.every(it=>(Array.isArray(it)?it[0]:it)==null);
+      {const L=name.toUpperCase().split('|'),t=el('text',{x:tx,y:ty+8-(L.length-1)*11,'text-anchor':Math.abs(sx)<.3?'middle':(sx>0?'start':'end'),fill:crossed?C.rd:(nq?'#666':C.fg),'font-size':20,'font-weight':crossed?600:400});L.forEach((ln,li)=>t.appendChild(el('tspan',{x:tx,dy:li?23:0},ln)));g.appendChild(t)}
+    });
+    g.appendChild(el('circle',{cx:0,cy:0,r:R,fill:'none',stroke:C.fg,'stroke-width':2.5,'stroke-dasharray':'7 6'}));
+  })();
+
+  /* Escalas */
+  (function(){
+    const g=document.getElementById('t1bars');
+    // x: umbral global 400..940 ; lentos 940..1490
+    const rows=[['CAMBIO CLIMÁTICO',400,940,100,'p'],['ACIDIFICACIÓN DEL OCÉANO',400,940,150,'p'],['OZONO ESTRATOSFÉRICO',670,1490,200,'p'],
+      ['CICLOS DE FÓSFORO Y NITRÓGENO',670,1490,280,'a'],['AEROSOLES',670,1490,326,'a'],['AGUA DULCE',805,1490,372,'a'],['USO DEL SUELO',805,1490,418,'a'],['BIODIVERSIDAD',940,1490,464,'a'],['CONTAMINACIÓN QUÍMICA',940,1490,510,'a']];
+    rows.forEach(([n,x0,x1,y,k])=>{g.appendChild(el('rect',{x:x0,y:y,width:x1-x0,height:38,fill:k==='p'?C.rd:C.am}));g.appendChild(el('text',{x:x0+14,y:y+27,fill:'#000'},n))});
+  })();
+
+  /* Indicadores */
+  (function(){
+    const rows=[['Clima','CO₂ (ppm)',280,350,387,1.53,1],['Biodiversidad','Extinciones/millón/año','0,1–1',10,'>100',11,1],['Nitrógeno','N₂ extraído (Mt/año)',0,35,121,3.46,1],
+      ['Fósforo','P al mar (Mt/año)',-1,11,'8,5–9,5',.8,0],['Ozono','Unidades Dobson',290,276,283,.5,0],['Océano','Aragonito (Ω)',3.44,2.75,2.90,.78,0],
+      ['Agua dulce','Consumo (km³/año)',415,'4.000','2.600',.61,0],['Uso del suelo','% tierra cultivada','bajo',15,11.7,.78,0]];
+    const tb=document.getElementById('t2'),MX=4;
+    rows.forEach(([n,v,p,l,y,r,x])=>{const tr=document.createElement('tr');if(x)tr.className='x';
+      const w=Math.min(r,MX)/MX*100,lim=1/MX*100,lab=r>10?'>1.000%':Math.round(r*100)+'%';
+      tr.innerHTML=`<td>${n}</td><td style="color:#9C9C9C">${v}</td><td class="r" style="color:${x?C.rd:C.fg};font-weight:600">${y}</td><td style="color:${x?C.rd:C.fg};font-size:16px;font-weight:600">${x?"SOBREPASADO":"No sobrepasado"}</td>`;
+      tb.appendChild(tr)});
+  })();
+
+  /* Vacío: barra dividida */
+  (function(){
+    const g=document.getElementById('splitbar'),parts=[['PAÍSES',.22],['INDUSTRIAS',.3],['EMPRESAS',.34],['LUGARES',.14]];let x=0;
+    parts.forEach(([n,f])=>{const w=1490*f-8;g.appendChild(el('rect',{x:x,y:216,width:w,height:90,fill:'none',stroke:C.am,'stroke-width':2,'stroke-dasharray':'10 8'}));
+      g.appendChild(el('text',{x:x+w/2,y:270,'text-anchor':'middle',fill:C.fg,'font-size':26,'font-weight':600},'? '+n));x+=1490*f});
+  })();
+
+  /* Literatura */
+  (function(){
+    const g=document.getElementById('t3'),D=[['QUÍMICOS',15,0],['CLIMA',13,1],['USO DEL SUELO',7,0],['BIODIVERSIDAD',4,1],['AGUA DULCE',3,0],['OZONO',2,0],['NITRÓGENO Y FÓSFORO',0,1],['AEROSOLES',0,0],['OCÉANO',0,0]];
+    const x0=380,w=900,rh=58;
+    D.forEach(([n,v,x],i)=>{const y=10+i*rh;
+      g.appendChild(el('text',{x:x0-20,y:y+32,'text-anchor':'end',fill:x?C.rd:C.fg,'font-size':24,'font-weight':x?600:400},n));
+      if(v)g.appendChild(el('rect',{x:x0,y:y+8,width:w*v/15,height:34,fill:C.am}));
+      g.appendChild(el('text',{x:x0+w*v/15+14,y:y+34,fill:v?C.fg:C.rd,'font-size':26,'font-weight':600},v?v:'SIN REFERENCIAS'));
+    });
+    g.appendChild(el('rect',{x:x0,y:10+9*rh+6,width:18,height:18,fill:C.rd}));
+    g.appendChild(el('text',{x:x0+28,y:10+9*rh+21,fill:C.mu,'font-size':19},'EN ROJO: LÍMITES YA CRUZADOS EN 2009'));
+  })();
+
+  /* Puntos 3→7 */
+  (function(){
+    const g=document.getElementById('dots'),Y=[['2009',3],['2015',4],['2023',6],['2026',7]];
+    Y.forEach(([y,n],i)=>{const yy=50+i*95;g.appendChild(el('text',{x:0,y:yy+12,fill:C.fg,'font-size':34,'font-weight':600},y));
+      for(let k=0;k<9;k++)g.appendChild(el('circle',{cx:150+k*68,cy:yy,r:24,fill:k<n?C.rd:'#1C1C1C',stroke:k<n?C.rd:'#333','stroke-width':2}));
+      g.appendChild(el('text',{x:900,y:yy+12,'text-anchor':'end',fill:C.rd,'font-size':34,'font-weight':600},n+'/9'))});
+  })();
+
+  /* Años bibliometría */
+  (function(){
+    const g=document.getElementById('yrs'),Y={2012:3,2013:5,2014:2,2015:5,2016:8,2017:4,2018:9,2019:9,2020:12,2021:16,2022:10,2023:34,2024:17,2025:32,2026:44};
+    const ks=Object.keys(Y),bw=48,h=320,mx=46;
+    ks.forEach((y,i)=>{const v=Y[y],bh=h*v/mx,x=10+i*bw;
+      g.appendChild(el('rect',{x:x,y:340-bh,width:bw-10,height:bh,fill:+y>=2023?C.am:'#3A3A3A'}));
+      g.appendChild(el('text',{x:x+(bw-10)/2,y:332-bh,'text-anchor':'middle',fill:C.fg,'font-size':17},v));
+      if(i%2===0||y==='2026')g.appendChild(el('text',{x:x+(bw-10)/2,y:368,'text-anchor':'middle',fill:C.mu,'font-size':16},"'"+y.slice(2)))});
+    g.appendChild(el('text',{x:10,y:396,fill:C.mu,'font-size':15},'ARTÍCULOS POR AÑO · 2026 HASTA OCTUBRE'));
+  })();
+
+
+
+  /* Evolución interactiva: una rueda que cambia con un clic */
+  (function(){
+    const svg=document.getElementById('evo1');if(!svg)return;
+    const LAB=['CONTAMINACIÓN|QUÍMICA','OZONO|ESTRATOSFÉRICO','AEROSOLES|ATMOSFÉRICOS','ACIDIFICACIÓN|DEL OCÉANO','CICLOS DE N Y P','USO DE|AGUA DULCE','CAMBIO EN|USO DEL SUELO','PÉRDIDA DE|BIODIVERSIDAD','CAMBIO|CLIMÁTICO'];
+    // dos sub-cuñas por sector; null = sin cuantificar
+    const Y={
+      2009:{ev:7,cr:3,v:[[null,null],[.45,.45],[null,null],[.8,.8],[2.9,.6],[.65,.65],[.75,.75],[3.2,3.2],[1.55,1.55]],
+        t:'Rockström et al. — el paper. Transgredidos: pérdida de biodiversidad, ciclo del nitrógeno y cambio climático. Contaminación química y aerosoles, sin cuantificar.'},
+      2015:{ev:7,cr:4,v:[[null,null],[.45,.45],[null,null],[.85,.85],[2.9,2.2],[.75,.75],[1.5,1.5],[null,2.8],[1.55,1.55]],
+        t:'Steffen et al. Se suma el cambio en el uso del suelo y el fósforo queda fuera. La biodiversidad se divide en genética y funcional.'},
+      2023:{ev:9,cr:6,v:[[3.0,3.0],[.45,.45],[.7,.7],[.95,.95],[2.6,2.1],[1.3,1.4],[1.8,1.8],[2.1,2.8],[1.7,2.2]],
+        t:'Richardson et al. Por primera vez se evalúan los nueve. Se suman el agua dulce y la contaminación química (hoy “nuevas entidades”).'},
+      2026:{ev:9,cr:7,v:[[3.0,3.0],[.45,.45],[.6,.6],[1.12,1.12],[2.6,2.1],[1.4,1.5],[1.8,1.8],[2.2,2.8],[1.8,2.3]],
+        t:'Planetary Health Check. Se suma la acidificación del océano. Solo el ozono y los aerosoles siguen dentro del espacio seguro.'}};
+    const YRS=[2009,2015,2023,2026],R=78,MX=3.1,STEP=40;
+    const pt=(r,d)=>[r*Math.sin(d*Math.PI/180),-r*Math.cos(d*Math.PI/180)];
+    const wedge=(r,a0,a1)=>{r=Math.max(r,.01);const[x0,y0]=pt(r,a0),[x1,y1]=pt(r,a1);return `M0 0L${x0} ${y0}A${r} ${r} 0 0 1 ${x1} ${y1}Z`};
+    const d=el('defs',{}),g=el('radialGradient',{id:'evoG',gradientUnits:'userSpaceOnUse',cx:0,cy:0,r:R*MX}),q=1/MX;
+    [[0,C.gr],[q,C.gr],[q+.001,'#FFC94A'],[q*1.7,C.am],[q*2.4,'#FF6A2B'],[1,C.rd]].forEach(([o,c])=>g.appendChild(el('stop',{offset:o,'stop-color':c})));
+    d.appendChild(g);svg.appendChild(d);
+    svg.appendChild(el('circle',{cx:0,cy:0,r:R,fill:'#0E2A20'}));
+    const slots=[],labels=[];
+    for(let i=0;i<9;i++){for(let j=0;j<2;j++){const b0=i*STEP+j*20+.6,b1=i*STEP+(j+1)*20-.6;
+      const nq=el('path',{d:wedge(R*MX,b0,b1),fill:'#1C1C1C',style:'transition:opacity .6s'}),col=el('path',{d:wedge(0,b0,b1),fill:'url(#evoG)'});
+      svg.appendChild(nq);svg.appendChild(col);slots.push({b0,b1,nq,col,r:0})}
+      const[ex,ey]=pt(R*MX+6,i*STEP);svg.appendChild(el('line',{x1:0,y1:0,x2:ex,y2:ey,stroke:'#2E2E2E','stroke-width':1.5}));
+      const mid=i*STEP+STEP/2,[tx,ty]=pt(R*MX+26,mid),sx=Math.sin(mid*Math.PI/180),L=LAB[i].split('|');
+      const t=el('text',{x:tx,y:ty+7-(L.length-1)*10,'text-anchor':Math.abs(sx)<.3?'middle':(sx>0?'start':'end'),'font-size':19,style:'transition:fill .4s'});
+      L.forEach((ln,li)=>t.appendChild(el('tspan',{x:tx,dy:li?21:0},ln)));svg.appendChild(t);labels.push(t)}
+    svg.appendChild(el('circle',{cx:0,cy:0,r:R,fill:'none',stroke:C.fg,'stroke-width':2.2,'stroke-dasharray':'6 5'}));
+    const yb=document.getElementById('evoY'),cb=document.getElementById('evoC'),eb=document.getElementById('evoE'),tb=document.getElementById('evoT'),btns=[...document.querySelectorAll('#evoBtns button[data-y]')];
+    let cur=0,anim=null,play=null;
+    function set(k){cur=k;const D=Y[YRS[k]];
+      btns.forEach((b,i)=>b.setAttribute('aria-pressed',i===k?'true':'false'));
+      yb.textContent=YRS[k];yb.style.color=k===0?C.am:C.fg;cb.textContent=D.cr;eb.textContent='· '+D.ev+' evaluados';tb.textContent=D.t;
+      const from=slots.map(s=>s.r),to=[];D.v.forEach(pair=>pair.forEach(v=>to.push(v==null?0:R*Math.min(v,MX))));
+      slots.forEach((s,i)=>{const v=D.v[Math.floor(i/2)][i%2];s.nq.style.opacity=v==null?1:0});
+      labels.forEach((t,i)=>{const p=D.v[i],cr=p.some(v=>v!=null&&v>1),nq=p.every(v=>v==null);t.setAttribute('fill',cr?C.rd:(nq?'#555':C.mu));t.setAttribute('font-weight',cr?600:400)});
+      const t0=performance.now(),dur=matchMedia('(prefers-reduced-motion: reduce)').matches?0:700;cancelAnimationFrame(anim);
+      const step=now=>{const u=dur?Math.min(1,(now-t0)/dur):1,e=1-Math.pow(1-u,3);
+        slots.forEach((s,i)=>{s.r=from[i]+(to[i]-from[i])*e;s.col.setAttribute('d',wedge(s.r,s.b0,s.b1))});if(u<1)anim=requestAnimationFrame(step)};
+      anim=requestAnimationFrame(step)}
+    btns.forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();stop();set(i)}));
+    svg.style.cursor='pointer';svg.addEventListener('click',()=>{stop();set((cur+1)%4)});
+    const pb=document.getElementById('evoPlay');
+    function stop(){if(play){clearInterval(play);play=null;pb.textContent='▶ ANIMAR'}}
+    pb.addEventListener('click',e=>{e.stopPropagation();if(play){stop();return}pb.textContent='❚❚ PAUSA';set(0);let k=0;play=setInterval(()=>{k++;if(k>3){stop();return}set(k)},1800)});
+    set(0);
+  })();
+
+  /* Comparación de literatura */
+  (function(){const g=document.getElementById('cmp3');if(!g)return;
+    const F=[['CAMBIO CLIMÁTICO',26,13,1],['CICLOS N Y P',10,0,1],['BIODIVERSIDAD',4,4,1],['AGUA DULCE',3,3,0],['CONTAM. QUÍMICA',2,15,0],['USO DEL SUELO',1,7,0],['OZONO',1,2,0],['AEROSOLES',1,0,0],['ACIDIFICACIÓN',0,0,0]];
+    const x0=330,w=900,rh=56,mx=.6;
+    g.appendChild(el('rect',{x:x0,y:0,width:18,height:14,fill:'#4A4A4A'}));g.appendChild(el('text',{x:x0+26,y:13,fill:C.mu,'font-size':18},'WHITEMAN ET AL. · 2013'));
+    g.appendChild(el('rect',{x:x0+260,y:0,width:18,height:14,fill:C.am}));g.appendChild(el('text',{x:x0+286,y:13,fill:C.fg,'font-size':18},'SCOPUS · 2012–2026'));
+    F.forEach(([n,a,b,x],i)=>{const y=34+i*rh,pa=a/48,pb=b/44;
+      g.appendChild(el('text',{x:x0-20,y:y+28,'text-anchor':'end',fill:x?C.rd:C.fg,'font-size':22,'font-weight':x?600:400},n));
+      g.appendChild(el('rect',{x:x0,y:y+2,width:Math.max(w*pb/mx,2),height:18,fill:'#4A4A4A'}));
+      g.appendChild(el('text',{x:x0+w*pb/mx+10,y:y+17,fill:C.mu,'font-size':17},Math.round(pb*100)+'%'));
+      g.appendChild(el('rect',{x:x0,y:y+24,width:Math.max(w*pa/mx,2),height:20,fill:C.am}));
+      g.appendChild(el('text',{x:x0+w*pa/mx+10,y:y+40,fill:C.fg,'font-size':19,'font-weight':600},Math.round(pa*100)+'%'));});
+    g.appendChild(el('text',{x:x0,y:34+9*rh+12,fill:C.mu,'font-size':17},'EN ROJO: LÍMITES YA CRUZADOS EN 2009'));
+  })();
+  /* Epílogo: red bipartita */
+  (function(){const g=document.getElementById('bip');if(!g)return;
+    const B=[['Cambio climático',58],['Biodiversidad',24],['Ciclos N y P',21],['Agua dulce',15],['Aerosoles',10],['Uso del suelo',10],['Contam. química',9],['Ozono',5],['Acidificación',2]];
+    const T=[['Sistemas y resiliencia',41],['Decrecimiento / ec. ecológica',37],['Contabilidad y reporte',33],['Sustentabilidad absoluta',23],['Economía circular',19],['Bienes comunes',12],['Legitimidad',6],['Stakeholders',3],['Recursos (RBV)',1],['Institucional',0]];
+    const E={'Cambio climático':{'Sistemas y resiliencia':10,'Contabilidad y reporte':8,'Sustentabilidad absoluta':6,'Bienes comunes':4,'Decrecimiento / ec. ecológica':4,'Economía circular':2,'Stakeholders':1},
+      'Biodiversidad':{'Contabilidad y reporte':6,'Sistemas y resiliencia':4,'Sustentabilidad absoluta':3,'Economía circular':2,'Decrecimiento / ec. ecológica':1},
+      'Ciclos N y P':{'Sistemas y resiliencia':3,'Economía circular':2,'Contabilidad y reporte':2,'Sustentabilidad absoluta':2,'Decrecimiento / ec. ecológica':1},
+      'Agua dulce':{'Sustentabilidad absoluta':3,'Sistemas y resiliencia':1,'Contabilidad y reporte':1},'Aerosoles':{'Sistemas y resiliencia':1},'Contam. química':{'Economía circular':2,'Contabilidad y reporte':2,'Sistemas y resiliencia':1}};
+    const LX=420,RX=1000,top=40,by=(a,i)=>top+i*(520/(a.length-1)),bp={},tp={};
+    B.forEach((b,i)=>bp[b[0]]=by(B,i));T.forEach((t,i)=>tp[t[0]]=by(T,i));
+    Object.entries(E).forEach(([b,o])=>Object.entries(o).forEach(([t,v])=>{const y1=bp[b],y2=tp[t];
+      g.appendChild(el('path',{d:`M${LX} ${y1} C${LX+260} ${y1} ${RX-260} ${y2} ${RX} ${y2}`,fill:'none',stroke:C.am,'stroke-width':1+v*1.3,opacity:.5}))}));
+    B.forEach(([n,c])=>{const y=bp[n],r=5+Math.sqrt(c)*2,iso=!E[n];
+      g.appendChild(el('circle',{cx:LX,cy:y,r:r,fill:iso?'#2A2A2A':C.rd}));
+      g.appendChild(el('text',{x:LX-r-14,y:y+7,'text-anchor':'end',fill:iso?'#666':C.fg,'font-size':21},n.toUpperCase()))});
+    T.forEach(([n,c])=>{const y=tp[n],r=c?5+Math.sqrt(c)*2:5;
+      g.appendChild(el('circle',{cx:RX,cy:y,r:r,fill:c?C.gr:'#2A2A2A'}));
+      g.appendChild(el('text',{x:RX+r+14,y:y+7,fill:c<=6?C.mu:C.fg,'font-size':21},n.toUpperCase()+'  '+c))});
+    g.appendChild(el('text',{x:LX,y:12,'text-anchor':'middle',fill:C.rd,'font-size':17,'font-weight':600},'LÍMITES'));
+    g.appendChild(el('text',{x:RX,y:12,'text-anchor':'middle',fill:C.gr,'font-size':17,'font-weight':600},'ENFOQUES TEÓRICOS'));
+  })();
+  /* Epílogo: red de conceptos */
+  (function(){const g=document.getElementById('kwb');if(!g)return;
+    const K={"n":[["pensamiento sistémico",5,0,248,428,1],["educación en management",3,0,496.2,241.7,0],["sustentabilidad ambiental",5,1,113.1,71.2,0],["Unión Europea",3,1,215,45,0],["decrecimiento",11,1,184.4,193.1,1],["sustentabilidad",32,0,428.7,354.9,0],["bienes comunes globales",3,2,582.2,492.3,1],["antropoceno",7,0,466.4,109.0,1],["análisis de ciclo de vida",9,2,442.2,432.6,0],["impacto ambiental",5,2,458.6,545,0],["sustentabilidad absoluta",4,1,134.9,368.1,1],["economía circular",9,2,662.2,318.6,1],["desarrollo sustentable",15,0,413.2,272.3,0],["emprendimiento sostenible",3,0,431.1,204.9,0],["cambio climático",11,3,339.1,490.0,0],["estrategia",3,0,154,476,0],["ODS",6,1,283.7,365.3,0],["reporte integrado",3,5,1045,180,0],["post-crecimiento",5,1,152.4,254.0,1],["capital natural",3,1,96.9,422.6,1],["transiciones a la sustentabilidad",5,1,183.1,111.9,1],["seguridad alimentaria",3,3,241.3,545,0],["sustentabilidad fuerte",4,4,428.4,50,1],["creación de valor",3,4,373.4,168.1,0],["incertidumbre",3,2,623.3,545,0],["economía de la rosquilla",5,1,138.1,311.6,1],["reporte de sustentabilidad",3,5,1045,260,0],["sustentabilidad corporativa",3,5,1045,340,0],["ESG",3,5,1045,420,0],["evaluación de sustentabilidad",3,2,764.5,377.2,0]],"e":[[0,5,4],[0,14,1],[0,1,1],[1,14,1],[1,5,1],[1,7,1],[2,4,1],[3,4,1],[4,18,2],[4,5,2],[4,22,1],[4,23,1],[4,25,1],[4,20,1],[5,7,2],[5,10,1],[5,12,6],[5,13,1],[5,14,1],[5,16,1],[5,25,1],[5,15,2],[5,11,1],[5,23,1],[5,8,1],[5,18,1],[6,12,1],[6,24,1],[7,22,1],[8,9,3],[8,24,1],[8,12,1],[8,11,1],[9,14,1],[9,24,1],[10,16,1],[11,12,1],[11,29,1],[12,13,2],[12,14,1],[12,16,1],[12,19,1],[12,15,1],[12,25,1],[12,23,1],[13,23,1],[14,15,1],[14,16,1],[14,21,1],[16,25,1],[16,18,1],[16,19,1],[17,28,1],[17,26,1],[18,25,1],[20,25,1],[22,23,1],[26,28,1],[27,28,1]]};
+    const CN=['Sustentabilidad y gestión sistémica','Más allá del crecimiento','Medición de impacto y circularidad','Clima y riesgo global','Sustentabilidad fuerte y negocio','Reporte corporativo y ESG'];
+    const CC=['#35D39A','#FF9E1B','#4DA3FF','#FF4B3E','#B48CFF','#2EC4C4'];
+    const Rr=f=>6+Math.sqrt(f)*3,FS=f=>Math.min(15+f*0.45,26);
+    K.e.forEach(([a,b,w])=>{const A=K.n[a],B=K.n[b],mx=(A[3]+B[3])/2,my=(A[4]+B[4])/2,dx=B[3]-A[3],dy=B[4]-A[4];
+      g.appendChild(el('path',{d:`M${A[3]} ${A[4]} Q${mx-dy*.12} ${my+dx*.12} ${B[3]} ${B[4]}`,fill:'none',stroke:CC[A[2]===B[2]?A[2]:0],'stroke-width':.8+w*.9,opacity:A[2]===B[2]?.5:.25}))});
+    g.appendChild(el('line',{x1:925,y1:110,x2:925,y2:520,stroke:'#333','stroke-dasharray':'4 5'}));
+    g.appendChild(el('text',{x:1045,y:130,'text-anchor':'middle',fill:C.mu,'font-size':16},'SIN CONEXIÓN'));
+    const ord=K.n.map((v,i)=>i).sort((a,b)=>K.n[a][1]-K.n[b][1]);
+    ord.forEach(i=>{const [l,f,c,x,y,t]=K.n[i];const ci=el('circle',{cx:x,cy:y,r:Rr(f),fill:CC[c],stroke:t?'#FFFFFF':'#000','stroke-width':t?2.5:1.5});ci.appendChild(el('title',{},l+' · '+f+' artículos'));g.appendChild(ci)});
+    const boxes=K.n.map(([l,f,c,x,y])=>({x:x-Rr(f),y:y-Rr(f),width:2*Rr(f),height:2*Rr(f)}));
+    const ov=(a,b)=>!(a.x+a.width<=b.x||b.x+b.width<=a.x||a.y+a.height<=b.y||b.y+b.height<=a.y);
+    ord.slice().reverse().forEach(i=>{const [l,f,c,x,y]=K.n[i],r=Rr(f),fs=FS(f);
+      const cand=[[x,y-r-5,'middle'],[x,y+r+fs,'middle'],[x+r+6,y+fs*.35,'start'],[x-r-6,y+fs*.35,'end'],[x,y-r-5-fs*.9,'middle'],[x,y+r+fs*1.9,'middle']];
+      let best=null;
+      for(const [lx,ly,a] of cand){const tx=el('text',{x:lx,y:ly,'text-anchor':a,'font-size':fs,'font-weight':f>=5?600:400,fill:C.fg,style:'paint-order:stroke;stroke:#000;stroke-width:5px;stroke-linejoin:round;font-family:var(--display)'},l);
+        g.appendChild(tx);const bb=tx.getBBox(),bx={x:bb.x-2,y:bb.y,width:bb.width+4,height:bb.height},n=boxes.filter(o=>ov(o,bx)).length;
+        if(n===0){if(best)best.tx.remove();boxes.push(bx);return}
+        if(!best||n<best.n){if(best)best.tx.remove();best={tx,bx,n}}else tx.remove();}
+      if(best)boxes.push(best.bx);});
+    const lg=document.getElementById('kwbleg');CN.forEach((n,i)=>{const d=document.createElement('div');d.innerHTML=`<span style="color:${CC[i]}">●</span> ${n}`;lg.appendChild(d)});
+    const d=document.createElement('div');d.className='mut';d.style.fontSize='15px';d.innerHTML='○ borde blanco = marco teórico';lg.appendChild(d);
+  })();
+
+  /* Escala, navegación, notas */
+  const stage=document.getElementById('stage'),slides=[...document.querySelectorAll('.slide')],N=slides.length,notes=document.getElementById('notes'),bN=document.getElementById('bN');
+  function fit(){const vw=window.innerWidth-32,vh=window.innerHeight;const s=Math.min(vw/1600,vh/900);stage.style.transform=`scale(${s})`}
+  window.addEventListener('resize',fit);fit();
+  const annexStart=slides.findIndex(s=>s.querySelector('h1')?.textContent.trim()==='ANEXOS'),mainCount=annexStart<0?N:annexStart;
+  slides.forEach((s,i)=>{const pg=s.querySelector('.ft .pg');if(pg)pg.remove();const tk=s.querySelector('.tk'),tag=tk.querySelector('.tag'),sp=document.createElement('span');sp.className='sec';sp.textContent=i<mainCount?String(i+1).padStart(2,'0')+' / '+String(mainCount).padStart(2,'0'):'ANEXOS';tk.insertBefore(sp,tag)});
+  let cur=0;
+  window.__go=i=>show(i);function show(i){cur=Math.max(0,Math.min(N-1,i));slides.forEach((s,k)=>s.hidden=k!==cur);notes.innerHTML='<b>NOTAS · '+(cur<mainCount?String(cur+1).padStart(2,'0'):'ANEXOS')+'</b><br>'+(slides[cur].dataset.notes||'');try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+  function toggleNotes(){notes.hidden=!notes.hidden;bN.setAttribute('aria-pressed',String(!notes.hidden))}
+  function fs(){const d=document.documentElement;try{if(!document.fullscreenElement)d.requestFullscreen().catch(()=>{});else document.exitFullscreen().catch(()=>{})}catch(e){}}
+  document.getElementById('bP').onclick=()=>show(cur-1);
+  document.getElementById('bX').onclick=()=>show(cur+1);
+  bN.onclick=toggleNotes;document.getElementById('bF').onclick=fs;
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(cur+1)}
+    else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(cur-1)}
+    else if(e.key==='n'||e.key==='N')toggleNotes();
+    else if(e.key==='f'||e.key==='F')fs();
+  });
+  let tx=null;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+  document.addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1));tx=null},{passive:true});
+  const m=/^#s(\d+)$/.exec(location.hash);show(m?+m[1]-1:0);
+})();
+</script>
+</body></html>
